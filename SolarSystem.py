@@ -2,6 +2,7 @@ import turtle
 
 window = turtle.Screen()
 
+
 #Set background color
 turtle.bgcolor("black")
 
@@ -38,3 +39,4 @@ Draw("gold", "gold", 70, 250)
 
 # Saturn
 #Draw("yellow", "yellow", 65, 400)
+turtle.mainloop()
