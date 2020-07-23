@@ -20,23 +20,29 @@ def Draw(color1, color2, radius, xcor):
     turtle.hideturtle()
 
 #  Sun
-Draw("yellow", "orange", 120, -400)
+Draw("yellow", "orange", 120, -600)
 
 # Mercury
-Draw("gray", "gray", 10, -350)
+Draw("gray", "gray", 10, -430)
 
 # Venus
-Draw("red", "red", 20, -250)
+Draw("red", "red", 20, -330)
 
 # Earth
-Draw("green", "blue", 30, -150)
+Draw("green", "blue", 30, -230)
 
 # Mars
-Draw("orange", "orange", 25, -50)
+Draw("orange", "orange", 25, -130)
 
 #Jupiter
-Draw("gold", "gold", 70, 250)
+Draw("gold", "gold", 70, 80)
 
 # Saturn
-#Draw("yellow", "yellow", 65, 400)
+Draw("yellow", "yellow", 60, 230)
 turtle.mainloop()
+
+# Uranus
+Draw("gray", "gray", 45, 530)
+
+# Neptune
+Draw("blue", "blue", 40, 880)
