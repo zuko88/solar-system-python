@@ -6,20 +6,27 @@ window = turtle.Screen()
 #Set background color
 turtle.bgcolor("black")
 
+window.screensize(600, 600)
+scale = 3000
+
+start_xcor = -450
+
 SUN = {
     "name": "Sun",
     "edge_color": "yellow",
     "fill_color": "orange",
-    "radius" : 120,
-    "xcor" : -600
+    "radius" : 432685,
+    "xcor" : -400,
+    "distance_from_sun": 0
 }
 
 MERCURY = {
     "name": "Mercury",
     "edge_color": "gray",
     "fill_color": "gray",
-    "radius" : 10,
-    "xcor" : -430
+    "radius" : 1500,
+    "xcor" : -430,
+    "distance_from_sun": 37 * 10 * 100 * 1000
 }
 
 VENUS = {
@@ -31,7 +38,7 @@ VENUS = {
 }
 
 
-planets = [SUN, MERCURY, VENUS]
+planets = [SUN, MERCURY]
 
 def Draw(edge_color, fill_color, radius, xcor):
     # Draw a planet or star
@@ -45,7 +52,15 @@ def Draw(edge_color, fill_color, radius, xcor):
     turtle.hideturtle()
 
 for  planet in planets:
-    Draw(planet["edge_color"], planet["fill_color"], planet["radius"], planet['xcor'])
+    radius = planet["radius"]
+    scaled_radius = radius / scale
+
+    xcor = start_xcor + (planet["distance_from_sun"] / scaled_radius)
+
+    print(scaled_radius)
+    print(xcor)
+
+    Draw(planet["edge_color"], planet["fill_color"], scaled_radius, planet["xcor"])
 
 # #  Sun
 # Draw("yellow", "orange", 120, -600)
